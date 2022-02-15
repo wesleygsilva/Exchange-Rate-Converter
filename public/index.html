@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img class="logo" src="/src/images/coin.png" alt="Logo">
+            <h1 class="title">Conversor de Moedas</h1>
+            <div class="data">
+                <div class="input-data">
+                    <select data-js="first-currency" class="form-select"></select>
+                    <select data-js="second-currency" class="form-select"></select>
+                </div>
+            
+                <div class="input-data">
+                    <input data-js="value-to-converter" class="input-value" type="number" name="value" min="1" value="1">
+                    <div data-js="convertedCurrency" class="convertedCurrency"></div>
+                </div>
+                <h2 data-js="result" class="result">Resultado</h2>
+            </div>
+        </div>
+    </main>   
+    
+    <script src="../src/js/script.js"></script>
+</body>
+</html>

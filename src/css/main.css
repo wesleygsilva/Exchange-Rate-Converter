@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 100%;
+    color: #FFF;
+    background-color: #2A7D38;
+}
+
+.container {
+    max-width: 320px;
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title {
+    padding: 20px;
+    font-size: 24px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-data {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.form-select, .input-value, .convertedCurrency {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+}
+
+.input-value{
+    text-align: right;
+    border: none;
+    -webkit-appearance: button;
+    outline: none;
+}
+
+.convertedCurrency {
+    text-align: right;
+    line-height: 38px;
+    font-size: 26px;
+    
+}
+
+.result {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+select {
+    border: none;
+    -webkit-appearance: button;
+    outline: none;
+}
