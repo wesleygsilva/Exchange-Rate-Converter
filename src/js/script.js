@@ -37,12 +37,7 @@ const fetchExchangeRate = async (url) => {
 
 const showReferenceConvertedCurrency = () => {
     resultExchangeRate.textContent = 
-        '1 ' + 
-        firstCurrencyEl.value + 
-        ' = ' + 
-        internalExchangeData.data[secondCurrencyEl.value].toFixed(5) + 
-        ' ' + 
-        secondCurrencyEl.value;
+        `1 ${firstCurrencyEl.value} = ${internalExchangeData.data[secondCurrencyEl.value].toFixed(5)} ${secondCurrencyEl.value}`;
 }
 
 const showConvertedCurrency = () => {
