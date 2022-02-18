@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 .title {
@@ -79,4 +79,13 @@ select {
     border: none;
     -webkit-appearance: button;
     outline: none;
+}
+
+footer {
+    display: flex;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
 }
