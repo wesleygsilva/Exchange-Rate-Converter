@@ -8,7 +8,9 @@ const resultExchangeRate = document.querySelector('[data-js="result"]');
 
 let internalExchangeData = { };
 
-const getUrl = currency => `https://freecurrencyapi.net/api/v2/latest?apikey=${API_KEY}&base_currency=${currency}`;
+//URL Anterior: Descontinuada
+// const getUrl = currency => `https://freecurrencyapi.net/api/v2/latest?apikey=${API_KEY}&base_currency=${currency}`;
+const getUrl = currency => `https://api.currencyapi.com/v3/latest?apikey=${API_KEY}&base_currency=${currency}`;
 
 const getErrorMessage = errorType => ({
     '200': 'Successful Request',
@@ -37,18 +39,17 @@ const fetchExchangeRate = async (url) => {
 
 const showReferenceConvertedCurrency = () => {
     resultExchangeRate.textContent = 
-        `1 ${firstCurrencyEl.value} = ${internalExchangeData.data[secondCurrencyEl.value].toFixed(5)} ${secondCurrencyEl.value}`;
+        `1 ${firstCurrencyEl.value} = ${internalExchangeData.data[secondCurrencyEl.value].value.toFixed(5)} ${secondCurrencyEl.value}`;
 }
 
 const showConvertedCurrency = () => {
     convertedCurrency.textContent = 
-        (valueToConverter.value * internalExchangeData.data[secondCurrencyEl.value]).toFixed(2);   
+        (valueToConverter.value * internalExchangeData.data[secondCurrencyEl.value].value).toFixed(2);   
 }
 
-const addCurrencyonCurrencys = CurrentCurrency => {
+const addCurrencyonCurrencys = () => {
     const Currency = Object.keys(internalExchangeData.data);
-    Currency.push(CurrentCurrency);
-    Currency.sort();
+    // Currency.sort();
 
     return Currency;
 }

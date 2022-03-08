@@ -89,3 +89,7 @@ footer {
     align-items: center;
     height: 10vh;
 }
+
+footer a {
+    color: #FFFFFF;
+}
